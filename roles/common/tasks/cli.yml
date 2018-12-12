@@ -1,0 +1,22 @@
+---
+- homebrew:
+    update_homebrew: yes
+    upgrade_all: yes
+
+- homebrew:
+    name:
+      - bash
+      - curl
+      - ghq
+      - git
+      - jq
+      - peco
+      - tree
+      - vim
+      - wget
+      # kubernetes
+      - kubectx
+      - kubernetes-cli
+      - stern
+      # cloud foundry
+      - cf-cli

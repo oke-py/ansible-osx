@@ -1,0 +1,16 @@
+---
+- homebrew:
+    name:
+      # lang
+      - go
+      - node
+      - python
+      - ruby
+      # kubernetes
+      - kubernetes-helm
+      - skaffold
+      # heroku
+      - heroku
+      - heroku-node
+      # security
+      - nmap

@@ -1,0 +1,10 @@
+---
+- git:
+    repo: 'https://github.com/sorin-ionescu/prezto.git'
+    dest: /Users/naoki/.zprezto
+    force: yes
+
+- lineinfile:
+    path: /Users/naoki/.zprezto/runcoms/zpreztorc
+    regexp: "^zstyle ':prezto:module:prompt' theme "
+    line: "zstyle ':prezto:module:prompt' theme 'pure'"
