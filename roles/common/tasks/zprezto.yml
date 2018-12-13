@@ -1,10 +1,10 @@
 ---
 - git:
     repo: 'https://github.com/sorin-ionescu/prezto.git'
-    dest: /Users/naoki/.zprezto
+    dest: "{{ ansible_env.HOME }}/.zprezto"
     force: yes
 
 - lineinfile:
-    path: /Users/naoki/.zprezto/runcoms/zpreztorc
+    path: "{{ ansible_env.HOME }}/.zprezto/runcoms/zpreztorc"
     regexp: "^zstyle ':prezto:module:prompt' theme "
     line: "zstyle ':prezto:module:prompt' theme 'pure'"
