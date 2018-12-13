@@ -17,3 +17,10 @@
     domain: com.apple.dock
     key: orientation
     value: left
+
+# ウインドウをアプリケーションアイコンにしまう
+- osx_defaults:
+    domain: com.apple.dock
+    key: minimize-to-application
+    type: bool
+    value: true
