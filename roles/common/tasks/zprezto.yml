@@ -24,3 +24,7 @@
     - zpreztorc
     - zprofile
     - zshenv
+
+- copy:
+    src: zshrc
+    dest: "{{ ansible_env.HOME}}/.zshrc"
