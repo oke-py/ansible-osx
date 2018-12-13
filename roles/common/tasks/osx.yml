@@ -1,0 +1,19 @@
+---
+# 日付、曜日を表示する
+- osx_defaults:
+    domain: com.apple.menuextra.clock
+    key: DateFormat
+    value: "M\\U6708d\\U65e5(EEE)  H:mm"
+
+# バッテリー残量の%を表示する
+- osx_defaults:
+    domain: com.apple.menuextra.battery
+    key: ShowPercent
+    type: string
+    value: 'YES'
+
+# Dockを左側に配置する
+- osx_defaults:
+    domain: com.apple.dock
+    key: orientation
+    value: left
