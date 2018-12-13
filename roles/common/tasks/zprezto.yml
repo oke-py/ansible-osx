@@ -8,3 +8,14 @@
     path: "{{ ansible_env.HOME }}/.zprezto/runcoms/zpreztorc"
     regexp: "^zstyle ':prezto:module:prompt' theme "
     line: "zstyle ':prezto:module:prompt' theme 'pure'"
+
+- file:
+    src: "{{ ansible_env.HOME }}/.zprezto/runcoms/{{ item }}"
+    dest: "{{ ansible_env.HOME }}/.{{ item }}"
+    state: link
+  with_items:
+    - zlogin
+    - zlogout
+    - zpreztorc
+    - zprofile
+    - zshenv
