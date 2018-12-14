@@ -1,3 +1,9 @@
 ---
 - name: restart_dock
   command: killall Dock
+
+- name: restart_finder
+  command: killall Finder
+
+- name: restart_system_ui_server
+  command: killall SystemUIServer

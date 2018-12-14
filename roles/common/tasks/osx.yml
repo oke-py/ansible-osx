@@ -4,6 +4,7 @@
     domain: com.apple.menuextra.clock
     key: DateFormat
     value: "M\\U6708d\\U65e5(EEE)  H:mm"
+  notify: restart_system_ui_server
 
 # バッテリー残量の%を表示する
 - osx_defaults:
@@ -11,6 +12,7 @@
     key: ShowPercent
     type: string
     value: 'YES'
+  notify: restart_system_ui_server
 
 # Dockを左側に配置する
 - osx_defaults:
@@ -26,3 +28,23 @@
     type: bool
     value: true
   notify: restart_dock
+
+# 新規Finderウインドウで$HOMEを開く
+- osx_defaults:
+    domain: com.apple.finder
+    key: NewWindowTarget
+    value: PfHm
+  notify: restart_finder
+
+- osx_defaults:
+    domain: com.apple.finder
+    key: NewWindowTargetPath
+    value: "file://{{ ansible_env.HOME }}/"
+  notify: restart_finder
+
+# スクリーンショットの保存形式をPNGにする
+- osx_defaults:
+    domain: com.apple.screencapture
+    key: type
+    value: png
+  notify: restart_system_ui_server
