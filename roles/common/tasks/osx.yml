@@ -1,4 +1,10 @@
 ---
+# 拡張子を常に表示する
+- osx_defaults:
+    key: AppleShowAllExtensions
+    type: bool
+    value: true
+
 # 日付、曜日を表示する
 - osx_defaults:
     domain: com.apple.menuextra.clock
@@ -42,9 +48,39 @@
     value: "file://{{ ansible_env.HOME }}/"
   notify: restart_finder
 
+# 隠しフォルダや隠しファイルを表示する
+- osx_defaults:
+    domain: com.apple.finder
+    key: AppleShowAllFiles
+    type: bool
+    value: true
+  notify: restart_finder
+
+# デフォルトはカラム表示にする
+- osx_defaults:
+    domain: com.apple.finder
+    key: FXPreferredViewStyle
+    value: clmv
+  notify: restart_finder
+
 # スクリーンショットの保存形式をPNGにする
 - osx_defaults:
     domain: com.apple.screencapture
     key: type
     value: png
+  notify: restart_system_ui_server
+
+# スクリーンショットに影をつけない
+- osx_defaults:
+    domain: com.apple.screencapture
+    key: disable-shadow
+    type: bool
+    value: true
+  notify: restart_system_ui_server
+
+# スクリーンショットのプレフィックスを変更する
+- osx_defaults:
+    domain: com.apple.screencapture
+    key: name
+    value: ss_
   notify: restart_system_ui_server
