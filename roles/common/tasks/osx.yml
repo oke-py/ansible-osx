@@ -63,6 +63,13 @@
     value: clmv
   notify: restart_finder
 
+# ネットワークストレージに.DS_Storeを作成しない
+- osx_defaults:
+    domain: com.apple.desktopservices
+    key: DSDontWriteNetworkStores
+    type: bool
+    value: true
+
 # スクリーンショットの保存形式をPNGにする
 - osx_defaults:
     domain: com.apple.screencapture
