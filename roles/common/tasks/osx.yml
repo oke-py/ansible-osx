@@ -91,3 +91,10 @@
     key: name
     value: ss_
   notify: restart_system_ui_server
+
+# スクリーンショットの保存先を変更する
+- osx_defaults:
+    domain: com.apple.screencapture
+    key: location
+    value: "{{ ansible_env.HOME }}/Pictures"
+  notify: restart_system_ui_server
