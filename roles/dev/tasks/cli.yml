@@ -13,4 +13,6 @@
       - heroku
       - heroku-node
       # security
+      - cfssl
       - nmap
+      - telnet
