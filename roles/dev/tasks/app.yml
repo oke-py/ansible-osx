@@ -3,6 +3,7 @@
     name:
       - owasp-zap
       - pycharm-ce
+      - vagrant
       - virtualbox
     state: upgraded
     install_options: 'appdir=/Applications'

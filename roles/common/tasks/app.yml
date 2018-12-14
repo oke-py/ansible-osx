@@ -2,6 +2,7 @@
 - homebrew_cask:
     name:
       - burp-suite
+      - google-japanese-ime
       - wireshark
     state: upgraded
     install_options: 'appdir=/Applications'
