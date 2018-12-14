@@ -1,5 +1,6 @@
 ---
 - include_tasks: ../roles/common/tasks/osx.yml
 - include_tasks: ../roles/common/tasks/zprezto.yml
+- include_tasks: ../roles/common/tasks/git_config.yml
 - include_tasks: ../roles/common/tasks/cli.yml
 - include_tasks: ../roles/common/tasks/app.yml
