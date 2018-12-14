@@ -2,6 +2,7 @@
 - homebrew_cask:
     name:
       - owasp-zap
+      - pycharm-ce
       - virtualbox
     state: upgraded
     install_options: 'appdir=/Applications'
