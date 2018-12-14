@@ -1,0 +1,7 @@
+---
+- homebrew_cask:
+    name:
+      - owasp-zap
+      - virtualbox
+    state: upgraded
+    install_options: 'appdir=/Applications'

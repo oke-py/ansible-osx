@@ -1,0 +1,7 @@
+---
+- homebrew_cask:
+    name:
+      - burp-suite
+      - wireshark
+    state: upgraded
+    install_options: 'appdir=/Applications'
