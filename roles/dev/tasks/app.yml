@@ -8,3 +8,6 @@
       - virtualbox
     state: upgraded
     install_options: 'appdir=/Applications'
+
+# TODO: changed: false if no updates are available
+- command: gcloud components update
