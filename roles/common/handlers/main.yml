@@ -1,4 +1,7 @@
 ---
+- name: restart_zsh
+  command: source {{ ansible_env.HOME }}/.zshrc
+
 - name: restart_dock
   command: killall Dock
 

@@ -28,3 +28,4 @@
 - copy:
     src: zshrc
     dest: "{{ ansible_env.HOME}}/.zshrc"
+  notify: restart_zsh
