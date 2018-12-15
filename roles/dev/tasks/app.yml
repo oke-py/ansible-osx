@@ -9,5 +9,6 @@
     state: upgraded
     install_options: 'appdir=/Applications'
 
-# TODO: changed: false if no updates are available
 - command: gcloud components update
+  register: result
+  changed_when: '"All components are up to date." not in result.stderr'
