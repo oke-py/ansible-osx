@@ -35,6 +35,14 @@
     value: true
   notify: restart_dock
 
+# 最近使ったアプリケーションをDockに表示しない
+- osx_defaults:
+    domain: com.apple.dock
+    key: show-recents
+    type: bool
+    value: false
+  notify: restart_dock
+
 # 新規Finderウインドウで$HOMEを開く
 - osx_defaults:
     domain: com.apple.finder
