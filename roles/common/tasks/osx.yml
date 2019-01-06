@@ -5,13 +5,6 @@
     type: bool
     value: true
 
-# 日付、曜日を表示する
-- osx_defaults:
-    domain: com.apple.menuextra.clock
-    key: DateFormat
-    value: "M\\U6708d\\U65e5(EEE)  H:mm"
-  notify: restart_system_ui_server
-
 # バッテリー残量の%を表示する
 - osx_defaults:
     domain: com.apple.menuextra.battery
