@@ -1,6 +1,7 @@
 ---
 - homebrew:
     name:
+      - clang-format
       # lang
       - go
       - node
