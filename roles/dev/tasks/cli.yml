@@ -2,6 +2,7 @@
 - homebrew:
     name:
       - clang-format
+      - protobuf
       # lang
       - go
       - node
