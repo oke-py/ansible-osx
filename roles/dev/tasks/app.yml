@@ -3,6 +3,7 @@
     name:
       - google-cloud-sdk
       - owasp-zap
+      - postman
       - pycharm-ce
       - vagrant
       - virtualbox
