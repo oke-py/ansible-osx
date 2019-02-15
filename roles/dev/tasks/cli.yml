@@ -19,3 +19,9 @@
       - cfssl
       - nmap
       - telnet
+
+- name: install npm-check-update node.js package globally
+  npm:
+    name: npm-check-updates
+    global: yes
+    state: latest
