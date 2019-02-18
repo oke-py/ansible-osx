@@ -5,6 +5,7 @@
       - owasp-zap
       - postman
       - pycharm-ce
+      - robo-3t
       - vagrant
       - virtualbox
     state: upgraded
