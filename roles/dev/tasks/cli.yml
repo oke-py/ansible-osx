@@ -5,6 +5,7 @@
       - mongodb
       - protobuf
       # lang
+      - dep
       - go
       - node
       - python
