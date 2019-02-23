@@ -17,6 +17,7 @@
       # kubernetes
       - kubectx
       - kubernetes-cli
+      - kube-ps1
       - stern
       # cloud foundry
       - cf-cli
