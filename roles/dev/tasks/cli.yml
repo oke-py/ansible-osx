@@ -1,6 +1,7 @@
 ---
 - homebrew:
     name:
+      - awscli
       - clang-format
       - mongodb
       - protobuf
