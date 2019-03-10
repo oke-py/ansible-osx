@@ -4,6 +4,7 @@
       - dynamodb-local
       - google-cloud-sdk
       - java
+      - minikube
       - owasp-zap
       - postman
       - pycharm-ce
