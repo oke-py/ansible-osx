@@ -13,6 +13,7 @@
       - ruby
       # kubernetes
       - istioctl
+      - kops
       - kubernetes-helm
       - skaffold
       # heroku
