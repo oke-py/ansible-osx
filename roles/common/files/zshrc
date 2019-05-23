@@ -16,9 +16,9 @@ export EDITOR=vim
 export VAGRANT_HOME=/Volumes/TOSHIBA\ EXT/data/Vagrant/.vagrant.d
 export PATH="$VAGRANT_HOME:$PATH"
 
-if [ -d "$HOME/anaconda3/bin" ]; then
-  export PATH="$HOME/anaconda3/bin:$PATH"
-fi
+# if [ -d "$HOME/anaconda3/bin" ]; then
+#   export PATH="$HOME/anaconda3/bin:$PATH"
+# fi
 
 if [ -d "$HOME/go/bin" ]; then
   export PATH="$HOME/go/bin:$PATH"
