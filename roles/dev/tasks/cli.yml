@@ -5,6 +5,7 @@
       - clang-format
       - mongodb
       - protobuf
+      - terraform
       # lang
       - dep
       - go
