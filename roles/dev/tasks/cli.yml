@@ -1,7 +1,6 @@
 ---
 - homebrew:
     name:
-      - awscli
       - clang-format
       - mongodb
       - protobuf
@@ -12,6 +11,11 @@
       - node
       - python
       - ruby
+      # aws
+      - awscli
+      - aws-iam-authenticator
+      - eksctl
+      - eksctl-aws-iam-authenticator
       # kubernetes
       - istioctl
       - kops
