@@ -1,6 +1,7 @@
 ---
 - homebrew:
     name:
+      - coreutils
       - clang-format
       - mongodb
       - protobuf
