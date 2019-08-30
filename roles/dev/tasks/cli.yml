@@ -1,4 +1,11 @@
 ---
+- homebrew_tap:
+    name:
+      - argoproj/tap
+      - cloudfoundry/tap
+      - heroku/brew
+      - weaveworks/tap
+
 - homebrew:
     name:
       - coreutils
@@ -18,6 +25,7 @@
       - eksctl
       - eksctl-aws-iam-authenticator
       # kubernetes
+      - argocd
       - istioctl
       - kops
       - kubernetes-helm
