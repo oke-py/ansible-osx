@@ -10,7 +10,6 @@
     name:
       - coreutils
       - clang-format
-      - mongodb
       - protobuf
       - terraform
       # lang
