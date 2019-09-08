@@ -28,7 +28,9 @@
       - argocd
       - istioctl
       - kops
+      - kubebuilder
       - kubernetes-helm
+      - kustomize
       - skaffold
       # heroku
       - heroku
