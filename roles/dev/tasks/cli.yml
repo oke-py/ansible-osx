@@ -30,6 +30,7 @@
       - kubebuilder
       - kubernetes-helm
       - kustomize
+      - operator-sdk
       - skaffold
       # heroku
       - heroku
