@@ -20,6 +20,7 @@ export PATH="$VAGRANT_HOME:$PATH"
 #   export PATH="$HOME/anaconda3/bin:$PATH"
 # fi
 
+export GOPATH="$HOME/go"
 export GO111MODULE=on
 if [ -d "$HOME/go/bin" ]; then
   export PATH="$HOME/go/bin:$PATH"
