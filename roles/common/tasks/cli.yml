@@ -3,6 +3,10 @@
     update_homebrew: yes
     upgrade_all: yes
 
+- homebrew_tap:
+    name:
+      - cloudfoundry/tap
+
 - homebrew:
     name:
       - bash

@@ -2,7 +2,6 @@
 - homebrew_tap:
     name:
       - argoproj/tap
-      - cloudfoundry/tap
       - heroku/brew
       - weaveworks/tap
 
