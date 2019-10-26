@@ -37,6 +37,10 @@ fi
 
 type kind > /dev/null 2>&1 && export KUBECONFIG="$HOME/.kube/config:$(kind get kubeconfig-path --name="kind")"
 
+if [ -d "/usr/local/kubebuilder/bin" ]; then
+  export PATH="$PATH:/usr/local/kubebuilder/bin"
+fi
+
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
