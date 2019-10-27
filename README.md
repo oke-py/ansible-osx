@@ -13,6 +13,6 @@ $ brew install ansible
 ## execute
 
 ```bash
-$ ansible-playbook -i inventory/local playbooks/my-mac.yml
+$ ansible-playbook -i inventory/local playbooks/my-mac.yml --ask-become-pass
 ```
 

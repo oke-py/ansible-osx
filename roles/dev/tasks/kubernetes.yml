@@ -1,0 +1,14 @@
+---
+- name: install kubebuilder
+  unarchive:
+    src: https://go.kubebuilder.io/dl/{{ kubebuilder_version }}/darwin/amd64
+    dest: /usr/local
+    remote_src: yes
+  become: yes
+
+- name: rename kubebuilder directory
+  file:
+    src: "/usr/local/kubebuilder_{{ kubebuilder_version }}_darwin_amd64"
+    dest: /usr/local/kubebuilder
+    state: link
+  become: yes
