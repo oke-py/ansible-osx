@@ -28,6 +28,7 @@
       - istioctl
       - kops
       - kubernetes-helm
+      - minikube
       - operator-sdk
       - skaffold
       # heroku
