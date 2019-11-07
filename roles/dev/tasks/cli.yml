@@ -9,6 +9,7 @@
     name:
       - coreutils
       - clang-format
+      - gnu-sed
       - gnu-tar
       - protobuf
       - terraform
