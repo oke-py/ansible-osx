@@ -43,8 +43,6 @@ if [ -f "/usr/local/opt/kube-ps1/share/kube-ps1.sh" ]; then
   export PROMPT='$(kube_ps1)'$PROMPT
 fi
 
-type kind > /dev/null 2>&1 && export KUBECONFIG="$HOME/.kube/config:$(kind get kubeconfig-path --name="kind")"
-
 if [ -d "/usr/local/kubebuilder/bin" ]; then
   export PATH="$PATH:/usr/local/kubebuilder/bin"
 fi
