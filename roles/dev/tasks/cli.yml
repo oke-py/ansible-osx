@@ -26,9 +26,9 @@
       - eksctl-aws-iam-authenticator
       # kubernetes
       - argocd
+      - helm
       - istioctl
       - kops
-      - kubernetes-helm
       - minikube
       - operator-sdk
       - skaffold
