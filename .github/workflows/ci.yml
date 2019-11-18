@@ -10,5 +10,10 @@ jobs:
     - name: Lint Ansible Playbook
       uses: ansible/ansible-lint-action@master
       with:
+        targets: "playbook"
+        args: ""
+    - name: Lint Ansible Roles
+      uses: ansible/ansible-lint-action@master
+      with:
         targets: "roles"
         args: ""
