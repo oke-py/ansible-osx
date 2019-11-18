@@ -1,4 +1,4 @@
-name: Ansible lint
+name: CI
 
 on: [push, pull_request]
 
