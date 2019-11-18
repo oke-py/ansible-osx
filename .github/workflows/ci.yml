@@ -1,14 +1,19 @@
-name: Ansible lint
+name: Ansible Lint
 
 on: [push, pull_request]
 
 jobs:
   lint:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
     - name: Lint Ansible Playbook
       uses: ansible/ansible-lint-action@master
       with:
-        targets: ""
+        targets: "playbook"
+        args: ""
+    - name: Lint Ansible Roles
+      uses: ansible/ansible-lint-action@master
+      with:
+        targets: "roles"
         args: ""
