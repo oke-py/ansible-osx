@@ -2,6 +2,7 @@
 - homebrew_tap:
     name:
       - argoproj/tap
+      - aws/tap
       - heroku/brew
       - weaveworks/tap
 
@@ -22,6 +23,7 @@
       # aws
       - awscli
       - aws-iam-authenticator
+      - aws-sam-cli
       - eksctl
       - eksctl-aws-iam-authenticator
       # kubernetes
