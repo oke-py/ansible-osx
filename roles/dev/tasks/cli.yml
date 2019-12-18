@@ -4,6 +4,7 @@
       - argoproj/tap
       - aws/tap
       - heroku/brew
+      - snyk/tap
       - weaveworks/tap
 
 - homebrew:
@@ -40,6 +41,7 @@
       # security
       - cfssl
       - nmap
+      - snyk
       - telnet
 
 - name: install npm-check-updates node.js package globally
