@@ -1,4 +1,4 @@
 ---
-kubebuilder_version: "2.2.0"
+kubebuilder_version: "2.3.0"
 kustomize_version: "v3.5.4"
 kind_version: "v0.7.0"
