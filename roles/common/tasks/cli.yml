@@ -9,6 +9,7 @@
 
 - homebrew:
     name:
+      - asdf
       - bash
       - curl
       - ghq
@@ -19,8 +20,6 @@
       - vim
       - wget
       # kubernetes
-      - kubectx
-      - kubernetes-cli
       - kube-ps1
       - stern
       # cloud foundry
