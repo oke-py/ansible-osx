@@ -21,9 +21,7 @@
       - python
       - ruby
       # aws
-      - awscli
       - aws-iam-authenticator
-      - aws-sam-cli
       # kubernetes
       - argocd
       - istioctl
