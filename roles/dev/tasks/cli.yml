@@ -17,7 +17,6 @@
       # lang
       - dep
       - go
-      - python
       - ruby
       # aws
       - aws-iam-authenticator
