@@ -17,7 +17,6 @@
       # lang
       - dep
       - go
-      - node
       - python
       - ruby
       # aws
@@ -36,14 +35,3 @@
       - snyk
       - telnet
 
-- name: install npm-check-updates node.js package globally
-  npm:
-    name: npm-check-updates
-    global: yes
-    state: latest
-
-- name: install serverless node.js package globally
-  npm:
-    name: serverless
-    global: yes
-    state: latest
