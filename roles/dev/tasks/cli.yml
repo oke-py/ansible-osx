@@ -2,7 +2,6 @@
 - homebrew_tap:
     name:
       - argoproj/tap
-      - aws/tap
       - heroku/brew
       - snyk/tap
 
@@ -13,11 +12,8 @@
       - gnu-sed
       - gnu-tar
       - protobuf
-      - terraform
       # lang
-      - dep
       - go
-      - ruby
       # aws
       - aws-iam-authenticator
       # kubernetes
