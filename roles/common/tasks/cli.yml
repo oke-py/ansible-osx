@@ -3,10 +3,6 @@
     update_homebrew: yes
     upgrade_all: yes
 
-- homebrew_tap:
-    name:
-      - cloudfoundry/tap
-
 - homebrew:
     name:
       - asdf
@@ -21,5 +17,3 @@
       # kubernetes
       - kube-ps1
       - stern
-      # cloud foundry
-      - cf-cli
