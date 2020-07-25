@@ -20,6 +20,11 @@
     value: vim
 
 - git_config:
+    name: pull.ff
+    scope: global
+    value: only
+
+- git_config:
     name: ghq.root
     scope: global
     value: "{{ ansible_env.HOME }}/go/src"

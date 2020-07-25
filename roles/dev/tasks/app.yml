@@ -1,13 +1,9 @@
 ---
 - homebrew_cask:
     name:
-      - dynamodb-local
       - google-cloud-sdk
       - java
       - owasp-zap
-      - postman
-      - pycharm-ce
-      - robo-3t
       - vagrant
       - virtualbox
     state: upgraded
