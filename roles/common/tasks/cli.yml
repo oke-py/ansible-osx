@@ -3,6 +3,9 @@
     update_homebrew: yes
     upgrade_all: yes
 
+- homebrew_tap:
+    name: superbrothers/zsh-kubectl-prompt
+
 - homebrew:
     name:
       - asdf
@@ -15,5 +18,5 @@
       - tree
       - wget
       # kubernetes
-      - kube-ps1
       - stern
+      - zsh-kubectl-prompt

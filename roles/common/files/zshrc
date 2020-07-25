@@ -40,10 +40,10 @@ alias g='cd $(ghq root)/$(ghq list | peco)'
 
 alias k=kubectl
 source <(kubectl completion zsh)
-if [ -f "/usr/local/opt/kube-ps1/share/kube-ps1.sh" ]; then
-  source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
-  export PROMPT='$(kube_ps1)'$PROMPT
-fi
+
+autoload -U colors; colors
+source /usr/local/etc/zsh-kubectl-prompt/kubectl.zsh
+RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
 
 if [ -d "/usr/local/kubebuilder/bin" ]; then
   export PATH="$PATH:/usr/local/kubebuilder/bin"
