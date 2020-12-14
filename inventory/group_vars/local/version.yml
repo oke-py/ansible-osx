@@ -1,4 +1,4 @@
 ---
 kubebuilder_version: "2.3.1"
-kustomize_version: "v3.8.2"
+kustomize_version: "v3.8.8"
 kind_version: "v0.9.0"
