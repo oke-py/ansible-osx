@@ -1,8 +1,4 @@
 ---
-- homebrew_tap:
-    name:
-      - snyk/tap
-
 - homebrew:
     name:
       - coreutils
@@ -20,6 +16,3 @@
       # security
       - cfssl
       - nmap
-      - snyk
-      - telnet
-

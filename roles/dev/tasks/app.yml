@@ -2,10 +2,6 @@
 - homebrew_cask:
     name:
       - google-cloud-sdk
-      - java
-      - owasp-zap
-      - vagrant
-      - virtualbox
     state: upgraded
     install_options: 'appdir=/Applications'
 
