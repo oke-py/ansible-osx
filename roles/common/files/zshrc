@@ -42,7 +42,7 @@ alias k=kubectl
 source <(kubectl completion zsh)
 
 autoload -U colors; colors
-if [ -f "$(brew --prefix zsh-kubectl-prompt)/etc/zsh-kubectl-prompt/kubectl.zsh)" ]; then
+if [ -f "$(brew --prefix zsh-kubectl-prompt)/etc/zsh-kubectl-prompt/kubectl.zsh" ]; then
   source $(brew --prefix zsh-kubectl-prompt)/etc/zsh-kubectl-prompt/kubectl.zsh
   RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
 fi
