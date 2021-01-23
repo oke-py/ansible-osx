@@ -16,6 +16,10 @@ export EDITOR=vim
 export VAGRANT_HOME=/Volumes/TOSHIBA\ EXT/data/Vagrant/.vagrant.d
 export PATH="$VAGRANT_HOME:$PATH"
 
+if [ -f "/opt/homebrew/bin/brew" ]; then
+  eval $(/opt/homebrew/bin/brew shellenv)
+fi
+
 # if [ -d "$HOME/anaconda3/bin" ]; then
 #   export PATH="$HOME/anaconda3/bin:$PATH"
 # fi
