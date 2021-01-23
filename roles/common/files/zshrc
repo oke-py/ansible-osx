@@ -20,16 +20,12 @@ if [ -f "/opt/homebrew/bin/brew" ]; then
   eval $(/opt/homebrew/bin/brew shellenv)
 fi
 
-# if [ -d "$HOME/anaconda3/bin" ]; then
-#   export PATH="$HOME/anaconda3/bin:$PATH"
-# fi
-
-if [ -d "/usr/local/opt/gnu-sed/libexec/gnubin" ]; then
-  export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+if [ -d "$(brew --prefix gnu-sed)/libexec/gnubin" ]; then
+  export PATH="$(brew --prefix gnu-sed)/libexec/gnubin:$PATH"
 fi
 
-if [ -d "/usr/local/opt/gnu-tar/libexec/gnubin" ]; then
-  export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+if [ -d "$(brew --prefix gnu-tar)/libexec/gnubin" ]; then
+  export PATH="$(brew --prefix gnu-tar)/libexec/gnubin:$PATH"
 fi
 
 . $(brew --prefix asdf)/asdf.sh
@@ -46,8 +42,8 @@ alias k=kubectl
 source <(kubectl completion zsh)
 
 autoload -U colors; colors
-if [ -f "$(brew --prefix zsh-kubectl-prompt)/kubectl.zsh)" ]; then
-  source /usr/local/etc/zsh-kubectl-prompt/kubectl.zsh
+if [ -f "$(brew --prefix zsh-kubectl-prompt)/etc/zsh-kubectl-prompt/kubectl.zsh)" ]; then
+  source $(brew --prefix zsh-kubectl-prompt)/etc/zsh-kubectl-prompt/kubectl.zsh
   RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
 fi
 
