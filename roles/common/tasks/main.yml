@@ -4,3 +4,4 @@
 - include_tasks: ../roles/common/tasks/git_config.yml
 - include_tasks: ../roles/common/tasks/cli.yml
 - include_tasks: ../roles/common/tasks/app.yml
+- include_tasks: ../roles/common/tasks/docker.yml

@@ -1,0 +1,15 @@
+---
+- name: Create zsh completion directory
+  file:
+    path: /usr/local/share/zsh/site-functions/
+    state: directory
+  become: yes
+
+- name: Copy docker completion
+  copy:
+    src: "/Applications/Docker.app/Contents/Resources/etc/{{ item.src }}"
+    dest: "/usr/local/share/zsh/site-functions/{{ item.dest }}"
+  loop:
+    - { src: docker.zsh-completion, dest: _docker }
+    - { src: docker-compose.zsh-completion, dest: _docker-compose }
+  become: yes

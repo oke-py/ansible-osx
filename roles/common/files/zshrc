@@ -67,5 +67,7 @@ fi
 # The next line makes PATH unique.
 typeset -U path PATH
 
+autoload -Uz compinit && compinit -i
+
 alias aws='docker run --rm -it -v ~/.aws:/root/.aws -v $(pwd):/aws amazon/aws-cli'
 
