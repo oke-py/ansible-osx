@@ -11,6 +11,7 @@
       # aws
       - aws-iam-authenticator
       # kubernetes
+      - kind
       - operator-sdk
       - skaffold
       # security

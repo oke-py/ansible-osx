@@ -1,26 +1,7 @@
 ---
-- name: install kubebuilder
-  unarchive:
-    src: https://go.kubebuilder.io/dl/{{ kubebuilder_version }}/darwin/amd64
-    dest: /usr/local
-    remote_src: yes
-  become: yes
-
-- name: rename kubebuilder directory
-  file:
-    src: "/usr/local/kubebuilder_{{ kubebuilder_version }}_darwin_amd64"
-    dest: /usr/local/kubebuilder
-    state: link
-  become: yes
-
 - name: install kustomize
   unarchive:
     src: "https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize/{{ kustomize_version }}/kustomize_{{ kustomize_version }}_darwin_amd64.tar.gz"
     dest: /usr/local/bin
     remote_src: yes
 
-- name: install kind
-  get_url:
-    url: "https://github.com/kubernetes-sigs/kind/releases/download/{{ kind_version }}/kind-darwin-amd64"
-    dest: /usr/local/bin/kind
-    mode: '0755'
