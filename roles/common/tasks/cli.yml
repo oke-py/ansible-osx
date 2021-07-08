@@ -10,6 +10,7 @@
     name:
       - asdf
       - bash
+      - bat
       - curl
       - ghq
       - git
