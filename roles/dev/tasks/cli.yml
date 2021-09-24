@@ -8,6 +8,7 @@
       - protobuf
       # lang
       - go
+      - ruby
       # aws
       - aws-iam-authenticator
       # kubernetes
