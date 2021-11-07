@@ -41,6 +41,7 @@ alias g='cd $(ghq root)/$(ghq list | peco)'
 
 alias k=kubectl
 source <(kubectl completion zsh)
+export DR="--dry-run=client -oyaml"
 
 autoload -U colors; colors
 if [ -f "$(brew --prefix zsh-kubectl-prompt)/etc/zsh-kubectl-prompt/kubectl.zsh" ]; then
