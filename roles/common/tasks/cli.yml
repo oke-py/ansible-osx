@@ -19,7 +19,5 @@
       - tree
       - wget
       # kubernetes
-      # - kubernetes-cli
-      # - kubectx
       - stern
       - zsh-kubectl-prompt

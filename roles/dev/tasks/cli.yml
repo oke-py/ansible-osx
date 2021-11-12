@@ -3,12 +3,12 @@
     name:
       - coreutils
       - clang-format
+      - docker-slim
       - gnu-sed
       - gnu-tar
       - protobuf
       # lang
       - go
-      - ruby
       # aws
       - aws-iam-authenticator
       # kubernetes
