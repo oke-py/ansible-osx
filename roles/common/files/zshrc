@@ -17,10 +17,6 @@ if [ -f "/opt/homebrew/bin/brew" ]; then
   eval $(/opt/homebrew/bin/brew shellenv)
 fi
 
-if [ -d "$(brew --prefix ruby)/bin" ]; then
-  export PATH="$(brew --prefix ruby)/bin:$PATH"
-fi
-
 if [ -d "$(brew --prefix gnu-sed)/libexec/gnubin" ]; then
   export PATH="$(brew --prefix gnu-sed)/libexec/gnubin:$PATH"
 fi
@@ -32,7 +28,6 @@ fi
 . $(brew --prefix asdf)/asdf.sh
 
 export GOPATH="$HOME/go"
-export GO111MODULE=on
 if [ -d "$HOME/go/bin" ]; then
   export PATH="$HOME/go/bin:$PATH"
 fi
@@ -44,47 +39,14 @@ source <(kubectl completion zsh)
 export DR="--dry-run=client -oyaml"
 
 autoload -U colors; colors
-if [ -f "$(brew --prefix zsh-kubectl-prompt)/etc/zsh-kubectl-prompt/kubectl.zsh" ]; then
-  source $(brew --prefix zsh-kubectl-prompt)/etc/zsh-kubectl-prompt/kubectl.zsh
-  RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
-fi
-
-if [ -d "/usr/local/kubebuilder/bin" ]; then
-  export PATH="$PATH:/usr/local/kubebuilder/bin"
-fi
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-export CLOUDSDK_PYTHON="$(brew --prefix python@3.9)/libexec/bin/python"
-
-export PATH="$HOME/google-cloud-sdk/bin:$PATH"
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f "$HOME/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc" ]; then
-  source "$HOME/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f "$HOME/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc" ]; then
-  source "$HOME/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-fi
 
 # The next line makes PATH unique.
 typeset -U path PATH
 
 autoload -Uz compinit && compinit -i
 
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/naoki/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/naoki/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/naoki/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/naoki/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+complete -C '/opt/homebrew/bin/aws_completer' aws
