@@ -3,9 +3,6 @@
     update_homebrew: yes
     upgrade_all: yes
 
-- homebrew_tap:
-    name: superbrothers/zsh-kubectl-prompt
-
 - homebrew:
     name:
       - asdf
@@ -18,6 +15,4 @@
       - peco
       - tree
       - wget
-      # kubernetes
-      - stern
-      - zsh-kubectl-prompt
+      - yq

@@ -1,7 +1,0 @@
----
-- name: install kustomize
-  unarchive:
-    src: "https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize/{{ kustomize_version }}/kustomize_{{ kustomize_version }}_darwin_amd64.tar.gz"
-    dest: /usr/local/bin
-    remote_src: yes
-

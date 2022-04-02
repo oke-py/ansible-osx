@@ -2,20 +2,11 @@
 - homebrew:
     name:
       - coreutils
-      - clang-format
-      - docker-slim
       - gnu-sed
       - gnu-tar
       - protobuf
       # lang
       - go
-      # aws
-      - aws-iam-authenticator
       # kubernetes
       - helm
       - kind
-      - operator-sdk
-      - skaffold
-      # security
-      - cfssl
-      - nmap
