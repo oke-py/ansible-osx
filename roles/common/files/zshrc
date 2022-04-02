@@ -11,6 +11,10 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+autoload -Uz compinit && compinit -i
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+
 export EDITOR=vim
 
 if [ -f "/opt/homebrew/bin/brew" ]; then
@@ -36,6 +40,7 @@ alias g='cd $(ghq root)/$(ghq list | peco)'
 
 alias k=kubectl
 source <(kubectl completion zsh)
+compdef __start_kubectl k
 export DR="--dry-run=client -oyaml"
 
 autoload -U colors; colors
@@ -45,8 +50,4 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 # The next line makes PATH unique.
 typeset -U path PATH
 
-autoload -Uz compinit && compinit -i
-
-autoload bashcompinit && bashcompinit
-autoload -Uz compinit && compinit
 complete -C '/opt/homebrew/bin/aws_completer' aws
