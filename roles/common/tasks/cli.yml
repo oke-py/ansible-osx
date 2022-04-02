@@ -12,7 +12,6 @@
       - ghq
       - git
       - jq
-      - peco
       - tree
       - wget
       - yq
