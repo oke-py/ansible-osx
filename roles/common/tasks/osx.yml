@@ -13,11 +13,11 @@
     value: 'YES'
   notify: restart_system_ui_server
 
-# Dockを左側に配置する
+# Dockを下側に配置する
 - osx_defaults:
     domain: com.apple.dock
     key: orientation
-    value: left
+    value: down
   notify: restart_dock
 
 # ウインドウをアプリケーションアイコンにしまう
