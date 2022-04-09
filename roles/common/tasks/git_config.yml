@@ -27,7 +27,7 @@
 - git_config:
     name: ghq.root
     scope: global
-    value: "{{ ansible_env.HOME }}/go/src"
+    value: "{{ ansible_env.HOME }}/src"
 
 # alias
 - git_config:
