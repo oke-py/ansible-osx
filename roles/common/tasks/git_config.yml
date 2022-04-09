@@ -31,11 +31,6 @@
 
 # alias
 - git_config:
-    name: alias.co
-    scope: global
-    value: checkout
-
-- git_config:
     name: alias.st
     scope: global
     value: status
@@ -59,16 +54,6 @@
     name: alias.dw
     scope: global
     value: 'diff -C --color-words'
-
-- git_config:
-    name: alias.br
-    scope: global
-    value: branch
-
-- git_config:
-    name: alias.ls
-    scope: global
-    value: ls-files
 
 # http://qiita.com/peccul/items/90dd469e2f72babbc106
 - git_config:
