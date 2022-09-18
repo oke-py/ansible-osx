@@ -13,6 +13,7 @@
       - bash
       - bat
       - curl
+      - fzf
       - ghq
       - git
       - hashicorp/tap/terraform

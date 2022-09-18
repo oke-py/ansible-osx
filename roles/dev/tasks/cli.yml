@@ -1,6 +1,7 @@
 ---
 - homebrew:
     name:
+      - awscli
       - coreutils
       - gnu-sed
       - gnu-tar
