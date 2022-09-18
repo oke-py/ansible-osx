@@ -4,17 +4,3 @@ Host github.com
     TCPKeepAlive yes
     IdentitiesOnly yes
     User git
-
-Host gitlab.com
-    HostName gitlab.com
-    IdentityFile ~/.ssh/gitlab/id_rsa
-    TCPKeepAlive yes
-    IdentitiesOnly yes
-    User git
-
-Host heroku.com
-    Hostname heroku.com
-    IdentityFile ~/.ssh/heroku/id_rsa
-    TCPKeepAlive yes
-    IdentitiesOnly yes
-    Port 22

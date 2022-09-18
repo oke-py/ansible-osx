@@ -6,8 +6,6 @@
   with_items:
     - .ssh
     - .ssh/github
-    - .ssh/gitlab
-    - .ssh/heroku
 
 - copy:
     src: ssh/config
