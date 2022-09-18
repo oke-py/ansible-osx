@@ -31,26 +31,6 @@
 
 # alias
 - git_config:
-    name: alias.st
-    scope: global
-    value: status
-
-- git_config:
-    name: alias.ci
-    scope: global
-    value: commit
-
-- git_config:
-    name: alias.di
-    scope: global
-    value: diff
-
-- git_config:
-    name: alias.dc
-    scope: global
-    value: 'diff --cached'
-
-- git_config:
     name: alias.dw
     scope: global
     value: 'diff -C --color-words'
