@@ -20,6 +20,14 @@ if [ -f "/opt/homebrew/bin/brew" ]; then
   eval $(/opt/homebrew/bin/brew shellenv)
 fi
 
+if [ -d "$(brew --prefix gnu-sed)/libexec/gnubin" ]; then
+  export PATH="$(brew --prefix gnu-sed)/libexec/gnubin:$PATH"
+fi
+
+if [ -d "$(brew --prefix gnu-tar)/libexec/gnubin" ]; then
+  export PATH="$(brew --prefix gnu-tar)/libexec/gnubin:$PATH"
+fi
+
 . $(brew --prefix asdf)/asdf.sh
 
 export GOPATH="$HOME/go"
