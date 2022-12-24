@@ -28,21 +28,3 @@
     name: ghq.root
     scope: global
     value: "{{ ansible_env.HOME }}/src"
-
-# alias
-- community.general.git_config:
-    name: alias.dw
-    scope: global
-    value: 'diff -C --color-words'
-
-# http://qiita.com/peccul/items/90dd469e2f72babbc106
-- community.general.git_config:
-    name: alias.graph
-    scope: global
-    value: "log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'"
-
-# http://qiita.com/uasi/items/70d4358c3c70c64f4261
-- community.general.git_config:
-    name: alias.rebase-from-mb
-    scope: global
-    value: "!sh -c 'git rebase -i $(git merge-base ${1:-master} HEAD)' -"
