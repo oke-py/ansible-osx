@@ -10,3 +10,4 @@
 - ansible.builtin.copy:
     src: ssh/config
     dest: "{{ ansible_env.HOME }}/.ssh/config"
+    mode: 0600

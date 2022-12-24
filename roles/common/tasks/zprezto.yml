@@ -28,4 +28,5 @@
 - ansible.builtin.copy:
     src: zshrc
     dest: "{{ ansible_env.HOME }}/.zshrc"
+    mode: 0644
   notify: restart_zsh
