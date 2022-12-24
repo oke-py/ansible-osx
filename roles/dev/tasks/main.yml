@@ -1,3 +1,5 @@
 ---
-- include_tasks: ../roles/dev/tasks/ssh_config.yml
-- include_tasks: ../roles/dev/tasks/cli.yml
+- name: Configure ssh
+  ansible.builtin.include_tasks: ../roles/dev/tasks/ssh_config.yml
+- name: Install command line tools
+  ansible.builtin.include_tasks: ../roles/dev/tasks/cli.yml

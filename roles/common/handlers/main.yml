@@ -1,12 +1,12 @@
 ---
-- name: restart_zsh
-  command: echo "please run source ~/.zshrc"
+- name: Suggest reloading zsh configuration
+  ansible.builtin.command: echo "please run source ~/.zshrc"
 
-- name: restart_dock
-  command: killall Dock
+- name: Restart Dock
+  ansible.builtin.command: killall Dock
 
-- name: restart_finder
-  command: killall Finder
+- name: Restart Finder
+  ansible.builtin.command: killall Finder
 
-- name: restart_system_ui_server
-  command: killall SystemUIServer
+- name: Restart SystemUIServer
+  ansible.builtin.command: killall SystemUIServer

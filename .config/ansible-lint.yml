@@ -1,0 +1,2 @@
+skip_list:
+  - latest[git]  # Result of the command may vary on subsequent runs.

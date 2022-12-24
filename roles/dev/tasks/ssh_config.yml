@@ -1,5 +1,6 @@
 ---
-- file:
+- name: Create ssh directories
+  ansible.builtin.file:
     path: "{{ ansible_env.HOME }}/{{ item }}"
     state: directory
     mode: 0700
@@ -7,6 +8,8 @@
     - .ssh
     - .ssh/github
 
-- copy:
+- name: Update ~/.ssh/config
+  ansible.builtin.copy:
     src: ssh/config
-    dest: "{{ ansible_env.HOME}}/.ssh/config"
+    dest: "{{ ansible_env.HOME }}/.ssh/config"
+    mode: 0600
