@@ -10,7 +10,7 @@
     domain: com.apple.dock
     key: orientation
     value: left
-  notify: restart_dock
+  notify: Restart Dock
 
 - name: Minimiza windows to application icons
   community.general.osx_defaults:
@@ -18,7 +18,7 @@
     key: minimize-to-application
     type: bool
     value: true
-  notify: restart_dock
+  notify: Restart Dock
 
 - name: Not show recent applications
   community.general.osx_defaults:
@@ -26,21 +26,21 @@
     key: show-recents
     type: bool
     value: false
-  notify: restart_dock
+  notify: Restart Dock
 
 - name: Open $HOME in a new Finder window
   community.general.osx_defaults:
     domain: com.apple.finder
     key: NewWindowTarget
     value: PfHm
-  notify: restart_finder
+  notify: Restart Finder
 
 - name: Open $HOME in a new Finder window
   community.general.osx_defaults:
     domain: com.apple.finder
     key: NewWindowTargetPath
     value: "file://{{ ansible_env.HOME }}/"
-  notify: restart_finder
+  notify: Restart Finder
 
 - name: Show hidden files
   community.general.osx_defaults:
@@ -48,14 +48,14 @@
     key: AppleShowAllFiles
     type: bool
     value: true
-  notify: restart_finder
+  notify: Restart Finder
 
 - name: Set Finder's default layout to columns
   community.general.osx_defaults:
     domain: com.apple.finder
     key: FXPreferredViewStyle
     value: clmv
-  notify: restart_finder
+  notify: Restart Finder
 
 - name: Not create .DS_Store on network storages
   community.general.osx_defaults:
@@ -69,7 +69,7 @@
     domain: com.apple.screencapture
     key: type
     value: png
-  notify: restart_system_ui_server
+  notify: Restart SystemUIServer
 
 - name: Disable shadow of screen capture
   community.general.osx_defaults:
@@ -77,18 +77,18 @@
     key: disable-shadow
     type: bool
     value: true
-  notify: restart_system_ui_server
+  notify: Restart SystemUIServer
 
 - name: Screen capture file name prefix
   community.general.osx_defaults:
     domain: com.apple.screencapture
     key: name
     value: ss_
-  notify: restart_system_ui_server
+  notify: Restart SystemUIServer
 
 - name: Screen capture location
   community.general.osx_defaults:
     domain: com.apple.screencapture
     key: location
     value: "{{ ansible_env.HOME }}/Pictures"
-  notify: restart_system_ui_server
+  notify: Restart SystemUIServer
