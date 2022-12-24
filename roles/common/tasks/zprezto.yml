@@ -2,7 +2,7 @@
 - ansible.builtin.git:
     repo: 'https://github.com/sorin-ionescu/prezto.git'
     dest: "{{ ansible_env.HOME }}/.zprezto"
-    force: yes
+    force: true
 
 - ansible.builtin.lineinfile:
     path: "{{ ansible_env.HOME }}/.zprezto/runcoms/zpreztorc"

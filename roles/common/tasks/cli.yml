@@ -1,7 +1,7 @@
 ---
 - community.general.homebrew:
-    update_homebrew: yes
-    upgrade_all: yes
+    update_homebrew: true
+    upgrade_all: true
 
 - community.general.homebrew:
     name:
