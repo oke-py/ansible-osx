@@ -1,6 +1,6 @@
 ---
-# 拡張子を常に表示する
-- community.general.osx_defaults:
+- name: Show all extensions
+  community.general.osx_defaults:
     key: AppleShowAllExtensions
     type: bool
     value: true
@@ -13,88 +13,89 @@
     value: 'YES'
   notify: restart_system_ui_server
 
-# Dockを左側に配置する
-- community.general.osx_defaults:
+- name: Place dock on the left side
+  community.general.osx_defaults:
     domain: com.apple.dock
     key: orientation
     value: left
   notify: restart_dock
 
-# ウインドウをアプリケーションアイコンにしまう
-- community.general.osx_defaults:
+- name: Minimiza windows to application icons
+  community.general.osx_defaults:
     domain: com.apple.dock
     key: minimize-to-application
     type: bool
     value: true
   notify: restart_dock
 
-# 最近使ったアプリケーションをDockに表示しない
-- community.general.osx_defaults:
+- name: Not show recent applications
+  community.general.osx_defaults:
     domain: com.apple.dock
     key: show-recents
     type: bool
     value: false
   notify: restart_dock
 
-# 新規Finderウインドウで$HOMEを開く
-- community.general.osx_defaults:
+- name: Open $HOME in a new Finder window
+  community.general.osx_defaults:
     domain: com.apple.finder
     key: NewWindowTarget
     value: PfHm
   notify: restart_finder
 
-- community.general.osx_defaults:
+- name: Open $HOME in a new Finder window
+  community.general.osx_defaults:
     domain: com.apple.finder
     key: NewWindowTargetPath
     value: "file://{{ ansible_env.HOME }}/"
   notify: restart_finder
 
-# 隠しフォルダや隠しファイルを表示する
-- community.general.osx_defaults:
+- name: Show hidden files
+  community.general.osx_defaults:
     domain: com.apple.finder
     key: AppleShowAllFiles
     type: bool
     value: true
   notify: restart_finder
 
-# デフォルトはカラム表示にする
-- community.general.osx_defaults:
+- name: Set Finder's default layout to columns
+  community.general.osx_defaults:
     domain: com.apple.finder
     key: FXPreferredViewStyle
     value: clmv
   notify: restart_finder
 
-# ネットワークストレージに.DS_Storeを作成しない
-- community.general.osx_defaults:
+- name: Not create .DS_Store on network storages
+  community.general.osx_defaults:
     domain: com.apple.desktopservices
     key: DSDontWriteNetworkStores
     type: bool
     value: true
 
-# スクリーンショットの保存形式をPNGにする
-- community.general.osx_defaults:
+- name: Save screen capture as png format
+  community.general.osx_defaults:
     domain: com.apple.screencapture
     key: type
     value: png
   notify: restart_system_ui_server
 
-# スクリーンショットに影をつけない
-- community.general.osx_defaults:
+- name: Disable shadow of screen capture
+  community.general.osx_defaults:
     domain: com.apple.screencapture
     key: disable-shadow
     type: bool
     value: true
   notify: restart_system_ui_server
 
-# スクリーンショットのプレフィックスを変更する
-- community.general.osx_defaults:
+- name: Screen capture file name prefix
+  community.general.osx_defaults:
     domain: com.apple.screencapture
     key: name
     value: ss_
   notify: restart_system_ui_server
 
-# スクリーンショットの保存先を変更する
-- community.general.osx_defaults:
+- name: Screen capture location
+  community.general.osx_defaults:
     domain: com.apple.screencapture
     key: location
     value: "{{ ansible_env.HOME }}/Pictures"

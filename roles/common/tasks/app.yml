@@ -1,5 +1,6 @@
 ---
-- community.general.homebrew_cask:
+- name: Install apps using homebrew cask
+  community.general.homebrew_cask:
     name:
       - google-japanese-ime
     state: upgraded

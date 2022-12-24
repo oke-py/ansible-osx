@@ -1,9 +1,11 @@
 ---
-- community.general.homebrew:
+- name: Upgrading homebrew formulae
+  community.general.homebrew:
     update_homebrew: true
     upgrade_all: true
 
-- community.general.homebrew:
+- name: Install command line tools using homebrew
+  community.general.homebrew:
     name:
       - asdf
       - bash
