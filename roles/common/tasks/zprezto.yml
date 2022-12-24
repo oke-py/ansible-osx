@@ -1,20 +1,20 @@
 ---
-- git:
+- ansible.builtin.git:
     repo: 'https://github.com/sorin-ionescu/prezto.git'
     dest: "{{ ansible_env.HOME }}/.zprezto"
     force: yes
 
-- lineinfile:
+- ansible.builtin.lineinfile:
     path: "{{ ansible_env.HOME }}/.zprezto/runcoms/zpreztorc"
     line: "  'autosuggestions'  \\\n  'syntax-highlighting' \\"
     insertafter: "^zstyle ':prezto:load' pmodule"
 
-- lineinfile:
+- ansible.builtin.lineinfile:
     path: "{{ ansible_env.HOME }}/.zprezto/runcoms/zpreztorc"
     regexp: "^zstyle ':prezto:module:prompt' theme "
     line: "zstyle ':prezto:module:prompt' theme 'pure'"
 
-- file:
+- ansible.builtin.file:
     src: "{{ ansible_env.HOME }}/.zprezto/runcoms/{{ item }}"
     dest: "{{ ansible_env.HOME }}/.{{ item }}"
     state: link
@@ -25,7 +25,7 @@
     - zprofile
     - zshenv
 
-- copy:
+- ansible.builtin.copy:
     src: zshrc
     dest: "{{ ansible_env.HOME}}/.zshrc"
   notify: restart_zsh

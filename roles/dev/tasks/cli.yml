@@ -1,5 +1,5 @@
 ---
-- homebrew:
+- community.general.homebrew:
     name:
       - awscli
       - coreutils

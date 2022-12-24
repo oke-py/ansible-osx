@@ -1,9 +1,9 @@
 ---
-- homebrew:
+- community.general.homebrew:
     update_homebrew: yes
     upgrade_all: yes
 
-- homebrew:
+- community.general.homebrew:
     name:
       - asdf
       - bash

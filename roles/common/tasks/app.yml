@@ -1,5 +1,5 @@
 ---
-- homebrew_cask:
+- community.general.homebrew_cask:
     name:
       - google-japanese-ime
     state: upgraded

@@ -1,12 +1,12 @@
 ---
 - name: Create zsh completion directory
-  file:
+  ansible.builtin.file:
     path: /usr/local/share/zsh/site-functions/
     state: directory
   become: yes
 
 - name: Copy docker completion
-  copy:
+  ansible.builtin.copy:
     src: "/Applications/Docker.app/Contents/Resources/etc/{{ item.src }}"
     dest: "/usr/local/share/zsh/site-functions/{{ item.dest }}"
   loop:

@@ -1,7 +1,7 @@
 ---
-- include_tasks: ../roles/common/tasks/osx.yml
-- include_tasks: ../roles/common/tasks/zprezto.yml
-- include_tasks: ../roles/common/tasks/git_config.yml
-- include_tasks: ../roles/common/tasks/cli.yml
-- include_tasks: ../roles/common/tasks/app.yml
-- include_tasks: ../roles/common/tasks/docker.yml
+- ansible.builtin.include_tasks: ../roles/common/tasks/osx.yml
+- ansible.builtin.include_tasks: ../roles/common/tasks/zprezto.yml
+- ansible.builtin.include_tasks: ../roles/common/tasks/git_config.yml
+- ansible.builtin.include_tasks: ../roles/common/tasks/cli.yml
+- ansible.builtin.include_tasks: ../roles/common/tasks/app.yml
+- ansible.builtin.include_tasks: ../roles/common/tasks/docker.yml

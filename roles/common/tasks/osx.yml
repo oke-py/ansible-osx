@@ -1,12 +1,12 @@
 ---
 # 拡張子を常に表示する
-- osx_defaults:
+- community.general.osx_defaults:
     key: AppleShowAllExtensions
     type: bool
     value: true
 
 # バッテリー残量の%を表示する
-- osx_defaults:
+- community.general.osx_defaults:
     domain: com.apple.menuextra.battery
     key: ShowPercent
     type: string
@@ -14,14 +14,14 @@
   notify: restart_system_ui_server
 
 # Dockを左側に配置する
-- osx_defaults:
+- community.general.osx_defaults:
     domain: com.apple.dock
     key: orientation
     value: left
   notify: restart_dock
 
 # ウインドウをアプリケーションアイコンにしまう
-- osx_defaults:
+- community.general.osx_defaults:
     domain: com.apple.dock
     key: minimize-to-application
     type: bool
@@ -29,7 +29,7 @@
   notify: restart_dock
 
 # 最近使ったアプリケーションをDockに表示しない
-- osx_defaults:
+- community.general.osx_defaults:
     domain: com.apple.dock
     key: show-recents
     type: bool
@@ -37,20 +37,20 @@
   notify: restart_dock
 
 # 新規Finderウインドウで$HOMEを開く
-- osx_defaults:
+- community.general.osx_defaults:
     domain: com.apple.finder
     key: NewWindowTarget
     value: PfHm
   notify: restart_finder
 
-- osx_defaults:
+- community.general.osx_defaults:
     domain: com.apple.finder
     key: NewWindowTargetPath
     value: "file://{{ ansible_env.HOME }}/"
   notify: restart_finder
 
 # 隠しフォルダや隠しファイルを表示する
-- osx_defaults:
+- community.general.osx_defaults:
     domain: com.apple.finder
     key: AppleShowAllFiles
     type: bool
@@ -58,28 +58,28 @@
   notify: restart_finder
 
 # デフォルトはカラム表示にする
-- osx_defaults:
+- community.general.osx_defaults:
     domain: com.apple.finder
     key: FXPreferredViewStyle
     value: clmv
   notify: restart_finder
 
 # ネットワークストレージに.DS_Storeを作成しない
-- osx_defaults:
+- community.general.osx_defaults:
     domain: com.apple.desktopservices
     key: DSDontWriteNetworkStores
     type: bool
     value: true
 
 # スクリーンショットの保存形式をPNGにする
-- osx_defaults:
+- community.general.osx_defaults:
     domain: com.apple.screencapture
     key: type
     value: png
   notify: restart_system_ui_server
 
 # スクリーンショットに影をつけない
-- osx_defaults:
+- community.general.osx_defaults:
     domain: com.apple.screencapture
     key: disable-shadow
     type: bool
@@ -87,14 +87,14 @@
   notify: restart_system_ui_server
 
 # スクリーンショットのプレフィックスを変更する
-- osx_defaults:
+- community.general.osx_defaults:
     domain: com.apple.screencapture
     key: name
     value: ss_
   notify: restart_system_ui_server
 
 # スクリーンショットの保存先を変更する
-- osx_defaults:
+- community.general.osx_defaults:
     domain: com.apple.screencapture
     key: location
     value: "{{ ansible_env.HOME }}/Pictures"
