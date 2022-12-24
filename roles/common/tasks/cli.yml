@@ -3,10 +3,6 @@
     update_homebrew: yes
     upgrade_all: yes
 
-- name: Tap a Homebrew repository, state present
-  community.general.homebrew_tap:
-    name: hashicorp/tap
-
 - homebrew:
     name:
       - asdf
@@ -16,7 +12,6 @@
       - fzf
       - ghq
       - git
-      - hashicorp/tap/terraform
       - jq
       - tree
       - wget

@@ -42,7 +42,6 @@ source <(kubectl completion zsh)
 compdef __start_kubectl k
 
 complete -C '/opt/homebrew/bin/aws_completer' aws
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
