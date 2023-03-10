@@ -7,13 +7,12 @@
 - name: Install command line tools using homebrew
   community.general.homebrew:
     name:
-      - asdf
-      - bash
-      - bat
       - curl
       - fzf
       - ghq
       - git
+      - gnu-sed
+      - gnu-tar
       - jq
       - tree
       - wget

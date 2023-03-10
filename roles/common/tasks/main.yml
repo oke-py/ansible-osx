@@ -11,3 +11,5 @@
   ansible.builtin.include_tasks: ../roles/common/tasks/app.yml
 - name: Configure docker
   ansible.builtin.include_tasks: ../roles/common/tasks/docker.yml
+- name: Configure ssh
+  ansible.builtin.include_tasks: ../roles/common/tasks/ssh_config.yml

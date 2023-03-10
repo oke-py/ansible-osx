@@ -3,4 +3,3 @@
   hosts: 'local'
   roles:
     - role: 'common'
-    - role: 'dev'
