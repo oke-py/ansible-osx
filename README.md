@@ -1,4 +1,5 @@
 # ansible-osx
+
 Mac OS X configuration management using Ansible
 
 ## prerequisite
@@ -13,6 +14,5 @@ $ brew install ansible
 ## execute
 
 ```bash
-$ ansible-playbook -i inventory/local playbooks/my-mac.yml --ask-become-pass
+$ ansible-playbook -i hosts.yml playbooks/my-mac.yml --ask-become-pass
 ```
-
