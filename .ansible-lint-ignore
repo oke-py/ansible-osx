@@ -1,0 +1,4 @@
+roles/common/handlers/main.yml no-changed-when
+roles/common/tasks/docker.yml yaml[octal-values]
+roles/common/tasks/ssh_config.yml yaml[octal-values]
+roles/common/tasks/zprezto.yml yaml[octal-values]

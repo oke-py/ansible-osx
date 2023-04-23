@@ -7,13 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Lint Ansible Playbook
-      uses: ansible/ansible-lint-action@main
       with:
-        targets: "playbook"
-        args: ""
-    - name: Lint Ansible Roles
+        fetch-depth: 0
+
+    - name: Run ansible-lint
       uses: ansible/ansible-lint-action@main
-      with:
-        targets: "roles"
-        args: ""
