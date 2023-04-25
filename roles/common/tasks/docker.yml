@@ -2,7 +2,7 @@
 - name: Create zsh completion directory
   ansible.builtin.file:
     path: /usr/local/share/zsh/site-functions/
-    mode: 0755
+    mode: "0755"
     state: directory
   become: true
 
@@ -10,7 +10,7 @@
   ansible.builtin.copy:
     src: "/Applications/Docker.app/Contents/Resources/etc/{{ item.src }}"
     dest: "/usr/local/share/zsh/site-functions/{{ item.dest }}"
-    mode: 0644
+    mode: "0644"
   loop:
     - { src: docker.zsh-completion, dest: _docker }
     - { src: docker-compose.zsh-completion, dest: _docker-compose }
