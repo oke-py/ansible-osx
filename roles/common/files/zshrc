@@ -28,8 +28,6 @@ if [ -d "$(brew --prefix gnu-tar)/libexec/gnubin" ]; then
   export PATH="$(brew --prefix gnu-tar)/libexec/gnubin:$PATH"
 fi
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
 export GOPATH="$HOME/go"
 if [ -d "$HOME/go/bin" ]; then
   export PATH="$HOME/go/bin:$PATH"
@@ -40,8 +38,6 @@ alias k=kubectl
 
 source <(kubectl completion zsh)
 compdef __start_kubectl k
-
-complete -C '/opt/homebrew/bin/aws_completer' aws
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
