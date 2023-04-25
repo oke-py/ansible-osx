@@ -33,5 +33,5 @@
   ansible.builtin.copy:
     src: zshrc
     dest: "{{ ansible_env.HOME }}/.zshrc"
-    mode: 0644
+    mode: "0644"
   notify: Suggest reloading zsh configuration
