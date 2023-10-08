@@ -8,10 +8,7 @@
 
 - name: Copy docker completion
   ansible.builtin.copy:
-    src: "/Applications/Docker.app/Contents/Resources/etc/{{ item.src }}"
-    dest: "/usr/local/share/zsh/site-functions/{{ item.dest }}"
+    src: "/Applications/Docker.app/Contents/Resources/etc/docker.zsh-completion"
+    dest: "/usr/local/share/zsh/site-functions/_docker"
     mode: "0644"
-  loop:
-    - { src: docker.zsh-completion, dest: _docker }
-    - { src: docker-compose.zsh-completion, dest: _docker-compose }
   become: true
