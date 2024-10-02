@@ -3,7 +3,7 @@ Host *
 
 Host github.com
     HostName github.com
-    IdentityFile ~/.ssh/github/id_rsa
+    IdentityFile ~/.ssh/github/id_ed25519
     TCPKeepAlive yes
     IdentitiesOnly yes
     User git
