@@ -7,8 +7,6 @@
   ansible.builtin.include_tasks: ../roles/common/tasks/git_config.yml
 - name: Install command line tools
   ansible.builtin.include_tasks: ../roles/common/tasks/cli.yml
-- name: Install apps
-  ansible.builtin.include_tasks: ../roles/common/tasks/app.yml
 - name: Configure docker
   ansible.builtin.include_tasks: ../roles/common/tasks/docker.yml
 - name: Configure ssh
