@@ -9,6 +9,7 @@
     name:
       - curl
       - fzf
+      - gh
       - ghq
       - git
       - gnu-sed
