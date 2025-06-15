@@ -5,11 +5,11 @@
     type: bool
     value: true
 
-- name: Place dock on the left side
+- name: Place dock on the right side
   community.general.osx_defaults:
     domain: com.apple.dock
     key: orientation
-    value: left
+    value: right
   notify: Restart Dock
 
 - name: Minimiza windows to application icons
