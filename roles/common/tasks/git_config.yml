@@ -33,4 +33,4 @@
   community.general.git_config:
     name: ghq.root
     scope: global
-    value: "{{ ansible_env.HOME }}/src"
+    value: "{{ ansible_facts['env']['HOME'] }}/src"
