@@ -39,7 +39,7 @@
   community.general.osx_defaults:
     domain: com.apple.finder
     key: NewWindowTargetPath
-    value: "file://{{ ansible_env.HOME }}/"
+    value: "file://{{ ansible_facts['env']['HOME'] }}/"
   notify: Restart Finder
 
 - name: Show hidden files
@@ -90,5 +90,5 @@
   community.general.osx_defaults:
     domain: com.apple.screencapture
     key: location
-    value: "{{ ansible_env.HOME }}/Pictures"
+    value: "{{ ansible_facts['env']['HOME'] }}/Pictures"
   notify: Restart SystemUIServer
