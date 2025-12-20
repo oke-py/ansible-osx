@@ -33,6 +33,10 @@ if [ -d "$HOME/go/bin" ]; then
   export PATH="$HOME/go/bin:$PATH"
 fi
 
+if [ -d "$HOME/.local/bin" ]; then
+  export PATH="$HOME/.local/bin:$PATH"
+fi
+
 alias g='cd $(ghq root)/$(ghq list | fzf)'
 alias k=kubectl
 
