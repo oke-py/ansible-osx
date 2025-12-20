@@ -15,4 +15,6 @@ jobs:
         fetch-depth: 0
 
     - name: Run ansible-lint
-      uses: ansible/ansible-lint-action@main
+      uses: ansible-actions/ansible-lint-action@v1.1.0
+      with:
+        target: ./
