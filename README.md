@@ -8,11 +8,15 @@ Mac OS X configuration management using Ansible
 # install homebrew
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-$ brew install ansible
+# install uv
+$ brew install uv
+
+# install dependencies
+$ uv sync
 ```
 
 ## execute
 
 ```bash
-$ ansible-playbook -i hosts.yml playbooks/my-mac.yml --ask-become-pass
+$ uv run ansible-playbook -i hosts.yml playbooks/my-mac.yml --ask-become-pass
 ```
