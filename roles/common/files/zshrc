@@ -1,3 +1,6 @@
+# Use emacs keybindings (Ctrl-A, Ctrl-E, etc.)
+bindkey -e
+
 autoload -Uz compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 
@@ -32,5 +35,8 @@ compdef __start_kubectl k
 
 # The next line makes PATH unique.
 typeset -U path PATH
+
+# fzf key bindings (Ctrl-R for history search) and completion
+source <(fzf --zsh)
 
 eval "$(starship init zsh)"
