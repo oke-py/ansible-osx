@@ -1,0 +1,7 @@
+---
+- name: Update ~/.zshrc
+  ansible.builtin.copy:
+    src: zshrc
+    dest: "{{ ansible_facts['env']['HOME'] }}/.zshrc"
+    mode: "0644"
+  notify: Suggest reloading zsh configuration

@@ -2,7 +2,7 @@
 - name: Configure osx
   ansible.builtin.include_tasks: ../roles/common/tasks/osx.yml
 - name: Configure zsh
-  ansible.builtin.include_tasks: ../roles/common/tasks/zprezto.yml
+  ansible.builtin.include_tasks: ../roles/common/tasks/zsh.yml
 - name: Configure git
   ansible.builtin.include_tasks: ../roles/common/tasks/git_config.yml
 - name: Install command line tools

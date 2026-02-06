@@ -5,11 +5,6 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
-
 # Allow overwriting files with > and >>
 setopt CLOBBER
 
@@ -51,3 +46,4 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 # The next line makes PATH unique.
 typeset -U path PATH
 
+eval "$(starship init zsh)"
