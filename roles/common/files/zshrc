@@ -39,4 +39,5 @@ typeset -U path PATH
 # fzf key bindings (Ctrl-R for history search) and completion
 source <(fzf --zsh)
 
+eval "$(mise activate zsh)"
 eval "$(starship init zsh)"
