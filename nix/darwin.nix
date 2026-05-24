@@ -12,9 +12,11 @@
   ];
 
   nixpkgs.hostPlatform = "aarch64-darwin";
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    "claude-code"
-  ];
+  nixpkgs.config.allowUnfreePredicate =
+    pkg:
+    builtins.elem (lib.getName pkg) [
+      "claude-code"
+    ];
 
   system.primaryUser = username;
   system.stateVersion = 7;
@@ -35,8 +37,10 @@
     gnutar
     jq
     nodejs_24
+    ripgrep
     starship
     tree
+    uv
     wget
     yq
   ];
