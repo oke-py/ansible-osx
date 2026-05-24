@@ -29,8 +29,8 @@
   home.file.".ssh/config".source = ./ssh_config;
 
   home.activation.createSshDirs = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    $DRY_RUN_CMD mkdir -p "$HOME/.ssh/github"
-    $DRY_RUN_CMD chmod 700 "$HOME/.ssh" "$HOME/.ssh/github"
+    $DRY_RUN_CMD mkdir -p "$HOME/.ssh"
+    $DRY_RUN_CMD chmod 700 "$HOME/.ssh"
     $DRY_RUN_CMD chmod 600 "$HOME/.ssh/config" 2>/dev/null || true
   '';
 }
