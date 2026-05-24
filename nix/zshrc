@@ -23,6 +23,10 @@ if command -v kubectl >/dev/null 2>&1; then
   compdef __start_kubectl k
 fi
 
+if command -v docker >/dev/null 2>&1; then
+  source <(docker completion zsh)
+fi
+
 # The next line makes PATH unique.
 typeset -U path PATH
 
