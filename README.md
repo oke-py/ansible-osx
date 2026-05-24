@@ -67,6 +67,7 @@ $ sudo /run/current-system/sw/bin/darwin-rebuild switch --flake .#uranus
 | Area | Location | Notes |
 | --- | --- | --- |
 | CLI packages | `environment.systemPackages` in `nix/darwin.nix` | Command-line tools are installed from nixpkgs. |
+| AI CLIs | `claude-code` and `codex` in `nix/darwin.nix` | Claude Code and Codex CLI are installed from nixpkgs. |
 | Node.js | `nodejs_24` in `nix/darwin.nix` | Node.js is installed from nixpkgs instead of mise. |
 | macOS defaults | `system.defaults` in `nix/darwin.nix` | Dock, Finder, desktop services, and screenshot defaults are managed by nix-darwin. |
 | zsh | `home.file.".zshrc"` in `nix/home.nix` | The zshrc content lives in `nix/zshrc`. |
@@ -84,4 +85,4 @@ After applying the Nix configuration, remove old mise state if it is no longer n
 $ rm -rf ~/.config/mise ~/.local/share/mise
 ```
 
-Claude and Codex CLI installation methods are tracked separately because they were originally installed outside this repository.
+After verifying the Nix-managed Claude Code and Codex CLI installations, remove old manual installs if they are no longer needed.

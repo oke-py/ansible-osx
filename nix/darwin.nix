@@ -1,5 +1,6 @@
 {
   pkgs,
+  lib,
   username,
   ...
 }:
@@ -11,6 +12,9 @@
   ];
 
   nixpkgs.hostPlatform = "aarch64-darwin";
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "claude-code"
+  ];
 
   system.primaryUser = username;
   system.stateVersion = 7;
@@ -20,6 +24,8 @@
   programs.zsh.enable = true;
 
   environment.systemPackages = with pkgs; [
+    claude-code
+    codex
     curl
     fzf
     gh
