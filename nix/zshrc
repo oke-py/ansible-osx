@@ -1,0 +1,40 @@
+# Use emacs keybindings (Ctrl-A, Ctrl-E, etc.)
+bindkey -e
+
+autoload -Uz compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+
+export EDITOR=vim
+
+export GOPATH="$HOME/go"
+if [ -d "$HOME/go/bin" ]; then
+  export PATH="$HOME/go/bin:$PATH"
+fi
+
+if [ -d "$HOME/.local/bin" ]; then
+  export PATH="$HOME/.local/bin:$PATH"
+fi
+
+alias g='cd $(ghq root)/$(ghq list | fzf)'
+alias k=kubectl
+
+if command -v kubectl >/dev/null 2>&1; then
+  source <(kubectl completion zsh)
+  compdef __start_kubectl k
+fi
+
+# The next line makes PATH unique.
+typeset -U path PATH
+
+# fzf key bindings (Ctrl-R for history search) and completion
+if command -v fzf >/dev/null 2>&1; then
+  source <(fzf --zsh)
+fi
+
+if command -v mise >/dev/null 2>&1; then
+  eval "$(mise activate zsh)"
+fi
+
+if command -v starship >/dev/null 2>&1; then
+  eval "$(starship init zsh)"
+fi
