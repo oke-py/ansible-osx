@@ -62,6 +62,19 @@ $ nix flake update
 $ sudo /run/current-system/sw/bin/darwin-rebuild switch --flake .#uranus
 ```
 
+### migration status
+
+| Ansible task | Nix replacement | Notes |
+| --- | --- | --- |
+| `roles/common/tasks/cli.yml` | `environment.systemPackages` in `nix/darwin.nix` | Homebrew formulae are now installed from nixpkgs. |
+| `roles/common/tasks/osx.yml` | `system.defaults` in `nix/darwin.nix` | Dock, Finder, desktop services, and screenshot defaults are managed by nix-darwin. |
+| `roles/common/tasks/zsh.yml` | `home.file.".zshrc"` in `nix/home.nix` | The zshrc content lives in `nix/zshrc`. |
+| `roles/common/tasks/git_config.yml` | `programs.git.settings` in `nix/home.nix` | Global Git configuration is managed by Home Manager. |
+| `roles/common/tasks/ssh_config.yml` | `home.file.".ssh/config"` and `home.activation.createSshDirs` in `nix/home.nix` | SSH config is linked from the existing role file, and directories are created during activation. |
+| `roles/common/tasks/docker.yml` | `docker completion zsh` in `nix/zshrc` | Docker completion is loaded dynamically when the `docker` command is available, instead of copying Docker Desktop completion files into `/usr/local`. |
+
+The Ansible handlers for restarting Dock, Finder, and SystemUIServer are replaced by nix-darwin activation behavior for `system.defaults`.
+
 ## prerequisite
 
 ```bash
