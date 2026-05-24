@@ -1,5 +1,0 @@
----
-- name: Configure local environment
-  hosts: 'local'
-  roles:
-    - role: 'common'

@@ -26,7 +26,7 @@
   };
 
   home.file.".zshrc".source = ./zshrc;
-  home.file.".ssh/config".source = ../roles/common/files/ssh/config;
+  home.file.".ssh/config".source = ./ssh_config;
 
   home.activation.createSshDirs = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     $DRY_RUN_CMD mkdir -p "$HOME/.ssh/github"

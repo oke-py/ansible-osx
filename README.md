@@ -1,6 +1,6 @@
 # ansible-osx
 
-Mac OS X configuration management using Ansible
+macOS configuration management using Nix, nix-darwin, and Home Manager.
 
 ## nix-darwin
 
@@ -62,34 +62,15 @@ $ nix flake update
 $ sudo /run/current-system/sw/bin/darwin-rebuild switch --flake .#uranus
 ```
 
-### migration status
+### managed areas
 
-| Ansible task | Nix replacement | Notes |
+| Area | Location | Notes |
 | --- | --- | --- |
-| `roles/common/tasks/cli.yml` | `environment.systemPackages` in `nix/darwin.nix` | Homebrew formulae are now installed from nixpkgs. |
-| `roles/common/tasks/osx.yml` | `system.defaults` in `nix/darwin.nix` | Dock, Finder, desktop services, and screenshot defaults are managed by nix-darwin. |
-| `roles/common/tasks/zsh.yml` | `home.file.".zshrc"` in `nix/home.nix` | The zshrc content lives in `nix/zshrc`. |
-| `roles/common/tasks/git_config.yml` | `programs.git.settings` in `nix/home.nix` | Global Git configuration is managed by Home Manager. |
-| `roles/common/tasks/ssh_config.yml` | `home.file.".ssh/config"` and `home.activation.createSshDirs` in `nix/home.nix` | SSH config is linked from the existing role file, and directories are created during activation. |
-| `roles/common/tasks/docker.yml` | `docker completion zsh` in `nix/zshrc` | Docker completion is loaded dynamically when the `docker` command is available, instead of copying Docker Desktop completion files into `/usr/local`. |
+| CLI packages | `environment.systemPackages` in `nix/darwin.nix` | Command-line tools are installed from nixpkgs. |
+| macOS defaults | `system.defaults` in `nix/darwin.nix` | Dock, Finder, desktop services, and screenshot defaults are managed by nix-darwin. |
+| zsh | `home.file.".zshrc"` in `nix/home.nix` | The zshrc content lives in `nix/zshrc`. |
+| Git | `programs.git.settings` in `nix/home.nix` | Global Git configuration is managed by Home Manager. |
+| SSH | `home.file.".ssh/config"` and `home.activation.createSshDirs` in `nix/home.nix` | SSH config lives in `nix/ssh_config`, and directories are created during activation. |
+| Docker completion | `docker completion zsh` in `nix/zshrc` | Docker completion is loaded dynamically when the `docker` command is available. |
 
-The Ansible handlers for restarting Dock, Finder, and SystemUIServer are replaced by nix-darwin activation behavior for `system.defaults`.
-
-## prerequisite
-
-```bash
-# install homebrew
-$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# install uv
-$ brew install uv
-
-# install dependencies
-$ uv sync
-```
-
-## execute
-
-```bash
-$ uv run ansible-playbook -i hosts.yml playbooks/my-mac.yml --ask-become-pass
-```
+This repository used to manage macOS with Ansible and Homebrew. The Ansible implementation has been removed after reaching parity with the Nix configuration.
