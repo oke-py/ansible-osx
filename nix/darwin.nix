@@ -28,7 +28,7 @@
     gnused
     gnutar
     jq
-    mise
+    nodejs_24
     starship
     tree
     wget
