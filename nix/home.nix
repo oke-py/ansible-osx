@@ -27,6 +27,7 @@
 
   home.file.".zshrc".source = ./zshrc;
   home.file.".ssh/config".source = ./ssh_config;
+  home.file.".npmrc".source = ./npmrc;
 
   home.activation.createSshDirs = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     $DRY_RUN_CMD mkdir -p "$HOME/.ssh"
