@@ -67,6 +67,7 @@ $ sudo /run/current-system/sw/bin/darwin-rebuild switch --flake .#uranus
 | Area | Location | Notes |
 | --- | --- | --- |
 | CLI packages | `environment.systemPackages` in `nix/darwin.nix` | Command-line tools are installed from nixpkgs. |
+| Node.js | `nodejs_24` in `nix/darwin.nix` | Node.js is installed from nixpkgs instead of mise. |
 | macOS defaults | `system.defaults` in `nix/darwin.nix` | Dock, Finder, desktop services, and screenshot defaults are managed by nix-darwin. |
 | zsh | `home.file.".zshrc"` in `nix/home.nix` | The zshrc content lives in `nix/zshrc`. |
 | Git | `programs.git.settings` in `nix/home.nix` | Global Git configuration is managed by Home Manager. |
@@ -74,3 +75,13 @@ $ sudo /run/current-system/sw/bin/darwin-rebuild switch --flake .#uranus
 | Docker completion | `docker completion zsh` in `nix/zshrc` | Docker completion is loaded dynamically when the `docker` command is available. |
 
 This repository used to manage macOS with Ansible and Homebrew. The Ansible implementation has been removed after reaching parity with the Nix configuration.
+
+### manual cleanup
+
+After applying the Nix configuration, remove old mise state if it is no longer needed.
+
+```bash
+$ rm -rf ~/.config/mise ~/.local/share/mise
+```
+
+Claude and Codex CLI installation methods are tracked separately because they were originally installed outside this repository.
