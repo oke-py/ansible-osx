@@ -1,9 +1,2 @@
 Host *
-    ForwardAgent yes
-
-Host github.com
-    HostName github.com
-    IdentityFile ~/.ssh/github/id_ed25519
-    TCPKeepAlive yes
-    IdentitiesOnly yes
-    User git
+    IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"

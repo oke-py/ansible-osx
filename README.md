@@ -70,7 +70,7 @@ $ sudo /run/current-system/sw/bin/darwin-rebuild switch --flake .#uranus
 | macOS defaults | `system.defaults` in `nix/darwin.nix` | Dock, Finder, desktop services, and screenshot defaults are managed by nix-darwin. |
 | zsh | `home.file.".zshrc"` in `nix/home.nix` | The zshrc content lives in `nix/zshrc`. |
 | Git | `programs.git.settings` in `nix/home.nix` | Global Git configuration is managed by Home Manager. |
-| SSH | `home.file.".ssh/config"` and `home.activation.createSshDirs` in `nix/home.nix` | SSH config lives in `nix/ssh_config`, and directories are created during activation. |
+| SSH | `home.file.".ssh/config"` and `home.activation.createSshDirs` in `nix/home.nix` | SSH config lives in `nix/ssh_config` and uses the 1Password SSH agent. |
 | Docker completion | `docker completion zsh` in `nix/zshrc` | Docker completion is loaded dynamically when the `docker` command is available. |
 
 This repository used to manage macOS with Ansible and Homebrew. The Ansible implementation has been removed after reaching parity with the Nix configuration.
